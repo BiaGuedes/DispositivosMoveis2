@@ -1,0 +1,212 @@
+﻿﻿<!DOCTYPE html>
+<html>
+
+  <head>
+    <link rel="stylesheet" type="text/css" href="media_button_bar/css/media_button_bar.css">
+
+    <link rel="stylesheet" type="text/css" href="icon-fonts/elusive-icons-2.0.0/css/elusive-icons.css">
+    <link rel="stylesheet" type="text/css" href="bootstrap/css/bootstrap.min.css">
+    <link rel="stylesheet" type="text/css" href="css/stil.css">
+    <link rel="stylesheet" type="text/css" href="bootstrap/css/bootstrap.css">
+    <link rel="stylesheet" type="text/css" href="icon-fonts/font-awesome-4.3.0/css/font-awesome.css">
+    <link rel="stylesheet" type="text/css" href="css/index_main.less.css" class="main-less">
+    <link rel="stylesheet" type="text/css" href="css/font-awesome-ie7.min.css" class="">
+    <link rel="stylesheet" type="text/css" href="css/font-awesome.css" class="">
+    <link rel="stylesheet" type="text/css" href="css/font-awesome.min.css" class="">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+
+   
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no">
+
+    <script src="intelxdk.js"></script>
+    <script src="cordova.js"></script>
+    <script src="xhr.js"></script>
+    <script src="xdk/init-dev.js"></script>
+    <script type="application/javascript" src="lib/jquery.min.js"></script>
+    <script type="application/javascript" src="marginal/marginal-position.min.js"></script>
+    <script type="application/javascript" src="sidebar/js/hammer.js"></script>
+    <script type="application/javascript" src="sidebar/js/jquery.hammer.js"></script>
+    <script type="application/javascript" src="sidebar/js/swipe-hammer.js"></script>
+    <script type="application/javascript" src="sidebar/js/sidebar.js"></script>
+    <script src="js/index.js"></script>
+       <script src="js/camera.js"></script>
+  </head>
+
+  <body>
+    <div class="upage" id="mainpage">
+      <div class="upage-outer">
+        <div class="uib-header header-bg container-group inner-element uib_w_4" data-uib="layout/header" data-ver="0">
+          <h2>Scanear Livros</h2>
+
+        </div>
+
+        <div class="upage-content ac0 content-area vertical-col left" id="page_94_20">
+
+          <div class="text-center">
+            <img src="images/livros_biblio.png" id="icon" alt="User Icon">
+          </div>
+
+            
+            
+          <div class="container">
+
+           
+
+       
+              
+               <script language="JavaScript" src="//ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script>
+        <script language="JavaScript" src="//ajax.googleapis.com/ajax/libs/swfobject/2.2/swfobject.js"></script>
+        <script language="JavaScript" src="js/Scriptcam.js"></script>
+        <script language="JavaScript"> 
+            $(document).ready(function() {
+                $("#webcam").scriptcam({
+                    showMicrophoneErrors:false,
+                    onError:onError,
+                    cornerRadius:20,
+                    disableHardwareAcceleration:1,
+                    cornerColor:'e3e5e2',
+                    onWebcamReady:onWebcamReady,
+                    uploadImage:'upload.gif',
+                    onPictureAsBase64:base64_tofield_and_image
+                });
+            });
+            function base64_tofield() {
+                $('#formfield').val($.scriptcam.getFrameAsBase64());
+            };
+            function base64_toimage() {
+                $('#image').attr("src","data:image/png;base64,"+$.scriptcam.getFrameAsBase64());
+            };
+            function base64_tofield_and_image(b64) {
+                $('#formfield').val(b64);
+                $('#image').attr("src","data:image/png;base64,"+b64);
+            };
+            function changeCamera() {
+                $.scriptcam.changeCamera($('#cameraNames').val());
+            }
+            function onError(errorId,errorMsg) {
+                $( "#btn1" ).attr( "disabled", true );
+                $( "#btn2" ).attr( "disabled", true );
+                alert(errorMsg);
+            }           
+            function onWebcamReady(cameraNames,camera,microphoneNames,microphone,volume) {
+                $.each(cameraNames, function(index, text) {
+                    $('#cameraNames').append( $('<option></option>').val(camera).html(text) )
+                }); 
+                $('#cameraNames').val(camera);
+            }
+        </script> 
+
+   
+       
+        <div style="width:135px;float:left;">
+            <p><button   type="file" class="btn btn-small" id="btn1" onclick="base64_tofield()">Acessa Camera</button>
+            
+    
+            </p>
+            
+        </div>
+        <div style="width:200px;float:left;">
+            <p><textarea id="formfield" style="width:190px;height:70px;"></textarea></p>
+            <p><img id="image" style="width:200px;height:153px;"/></p>
+        </div>
+              
+              
+             
+              
+              
+              <section>
+              
+              <div class="text-center">
+            <a href="index.html"><button class="btn btn-xs btn-info">Voltar ao inicio</button> </a> 
+          </div>
+              
+              </section>
+            
+              
+              
+              
+              
+              
+               <form action="" method="post" enctype="multipart/form-data" id="js-upload-form">
+            <div class="form-inline">
+              
+                <span class="btn btn-success fileinput-button">
+                    <i class="glyphicon glyphicon-plus"></i>
+                    <span>Upload Imagem</span>
+                    <input type="file" name="files[]" multiple>
+                </span>
+       
+                               
+              <button type="button" class="btn btn-danger delete">
+                    <i class="glyphicon glyphicon-trash"></i>
+                    <span>Deletar</span>
+                </button>
+            </div>
+          </form>
+              
+              
+
+          </div>
+
+          <!-- Inicio Fomulario -->
+
+          <!--- Fim form--->
+
+          <div class="uib-footer uib-footer-fixed footer-bg container-group inner-element uib_w_2 header-bg" data-uib="layout/footer" data-ver="0">
+            <h2></h2>
+            <div class="widget-container wrapping-col single-centered"></div>
+            <div class="widget-container content-area horiz-area wrapping-col left"></div>
+            <div class="widget-container content-area horiz-area wrapping-col right">
+
+            </div>
+          </div>
+          <div class="inner-element uib_w_3 uib_sidebar leftbar bar-bg thumb-bg bar-gutter" data-uib="layout/left_sidebar" data-ver="1" data-anim="{'style':'overlap', 'v':200, 'side':'left', 'dur':200, 'io':false}">
+            <div class="sidebar-content content-area vertical-col">
+
+            </div>
+          </div>
+        </div>
+
+        <!-- Inicio Fomulario -->
+
+        <!--- Fim form--->
+
+        <div class="inner-element uib_w_3 uib_sidebar leftbar bar-bg thumb-bg bar-gutter" data-uib="layout/left_sidebar" data-ver="1" data-anim="{'style':'overlap', 'v':200, 'side':'left', 'dur':200, 'io':false}">
+          <div class="sidebar-content content-area vertical-col">
+
+          </div>
+        </div>
+      </div>
+     
+    </div>
+
+    <script src="//production-assets.codepen.io/assets/common/stopExecutionOnTimeout-b2a7b3fe212eaa732349046d8416e00a9dec26eb7fd347590fbced3ab38af52e.js"></script>
+    <script src="https://code.jquery.com/jquery-2.2.4.min.js"></script>
+    <script>
+      $(document).ready(function(){
+        var $likeToggle = $('.user-input .like');
+        var $shareToggle = $('.user-input .share');
+        var $addRecipeToggle = $('.add-recipe');
+        
+        $likeToggle.on('click', function(e){
+          e.stopPropagation();
+          $(this).toggleClass('liked');
+        });
+        
+        $shareToggle.on('click', function(e){
+          e.stopPropagation();
+          $(this).toggleClass('shared');
+        });
+        
+        $addRecipeToggle.on('click', function(e){
+          e.stopPropagation();
+          $(this).toggleClass('added');
+        });
+        
+      });
+      //# sourceURL=pen.js
+    </script>
+  </body>
+
+</html>﻿

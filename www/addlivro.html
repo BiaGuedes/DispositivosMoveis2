@@ -1,0 +1,197 @@
+﻿<!DOCTYPE html>
+<html>
+
+  <head>
+    <link rel="stylesheet" type="text/css" href="media_button_bar/css/media_button_bar.css">
+
+    <link rel="stylesheet" type="text/css" href="icon-fonts/elusive-icons-2.0.0/css/elusive-icons.css">
+    <link rel="stylesheet" type="text/css" href="bootstrap/css/bootstrap.min.css">
+    <link rel="stylesheet" type="text/css" href="css/stil.css">
+    <link rel="stylesheet" type="text/css" href="bootstrap/css/bootstrap.css">
+    <link rel="stylesheet" type="text/css" href="icon-fonts/font-awesome-4.3.0/css/font-awesome.css">
+    <link rel="stylesheet" type="text/css" href="css/index_main.less.css" class="main-less">
+    <link rel="stylesheet" type="text/css" href="css/font-awesome-ie7.min.css" class="">
+    <link rel="stylesheet" type="text/css" href="css/font-awesome.css" class="">
+    <link rel="stylesheet" type="text/css" href="css/font-awesome.min.css" class="">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+      
+      <script type="text/javascript" src="http://code.jquery.com/jquery-1.8.3.min.js"></script>       
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
+      
+
+    <script src="/__/firebase/4.9.0/firebase-app.js"></script>
+    <script src="/__/firebase/4.9.0/firebase-auth.js"></script>
+    <script src="/__/firebase/4.9.0/firebase-database.js"></script>
+    <script src="/__/firebase/4.9.0/firebase-messaging.js"></script>
+    <script src="/__/firebase/init.js"></script>
+       <script type="text/javascript" src="js/function.js"></script>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no">
+
+    <script src="intelxdk.js"></script>
+    <script src="cordova.js"></script>
+    <script src="xhr.js"></script>
+    <script src="xdk/init-dev.js"></script>
+    <script type="application/javascript" src="lib/jquery.min.js"></script>
+    <script type="application/javascript" src="marginal/marginal-position.min.js"></script>
+    <script type="application/javascript" src="sidebar/js/hammer.js"></script>
+    <script type="application/javascript" src="sidebar/js/jquery.hammer.js"></script>
+    <script type="application/javascript" src="sidebar/js/swipe-hammer.js"></script>
+    <script type="application/javascript" src="sidebar/js/sidebar.js"></script>
+    <script src="js/index.js"></script>
+  </head>
+
+  <body>
+    <div class="upage" id="mainpage">
+      <div class="upage-outer">
+        <div class="uib-header header-bg container-group inner-element uib_w_4" data-uib="layout/header" data-ver="0">
+          <h2>Livros</h2>
+
+        </div>
+
+        <div class="upage-content ac0 content-area vertical-col left" id="page_94_20">
+
+          <div class="text-center">
+            <img src="images/livros_biblio.png" id="icon" alt="User Icon">
+          </div>
+
+            
+            
+          <div class="container">
+
+           
+<div class="container-fluid">
+
+    
+    <h3> Cadastrar Livros</h3>
+    
+  <form id="frmPerson" class="form-horizontal">
+                <div class="form-group">
+                    <label for="txtID" class="col-sm-2 control-label">ID</label>
+                    <div class="col-sm-4">
+                        <input type="text" id="txtID" class="form-control" placeholder="ID">
+                    </div>
+                </div>                    
+                <div class="form-group">
+                    <label for="txtTitulo" class="col-lg-2 control-label">Titulo</label>
+                    <div class="col-sm-4">
+                        <input type="text" id="txtTitulo" class="form-control" placeholder="Titulo">
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label for="txtPhone" class="col-lg-2 control-label">Editora</label>
+                    <div class="col-sm-4">
+                        <input type="text" id="txtEditora" class="form-control" placeholder="Editora">
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label for="txtSinop" class="col-lg-2 control-label">Sinopse</label>
+                    <div class="col-sm-4">
+                        <input type="text" id="txtSinop" class="form-control" placeholder="Sinopse">
+                    </div>
+                </div>
+                <div class="form-group">
+                    <div class="col-lg-offset-2 col-sm-4">
+                        <input type="submit" value="Cadastrar" id="btnSave" class="btn btn-success"/>
+                    </div>
+                </div>
+            </form>
+    
+    
+    <h2> Meus livros cadastrados </h2>
+    
+    
+        </div>      
+
+        <!--Tabla con la lista de datos-->
+        <div class="container-fluid">
+            <table id="tblList" class="table table-bordered"></table>
+        </div>
+    
+    
+              <div class="text-center">
+            <a href="index.html"><button class="btn btn-xs btn-info">Voltar ao inicio</button> </a>   
+          </div>
+              
+    
+    
+        </div>
+              
+              
+              
+              
+              
+              
+  </div>
+               <div class="text-center">
+            <a href="index.html"><button class="btn btn-xs btn-info">Voltar ao inicio</button> </a>   
+          </div>
+              
+              
+              
+
+          </div>
+
+          <!-- Inicio Fomulario -->
+
+          <!--- Fim form--->
+
+          <div class="uib-footer uib-footer-fixed footer-bg container-group inner-element uib_w_2 header-bg" data-uib="layout/footer" data-ver="0">
+            <h2></h2>
+            <div class="widget-container wrapping-col single-centered"></div>
+            <div class="widget-container content-area horiz-area wrapping-col left"></div>
+            <div class="widget-container content-area horiz-area wrapping-col right">
+
+            </div>
+          </div>
+          <div class="inner-element uib_w_3 uib_sidebar leftbar bar-bg thumb-bg bar-gutter" data-uib="layout/left_sidebar" data-ver="1" data-anim="{'style':'overlap', 'v':200, 'side':'left', 'dur':200, 'io':false}">
+            <div class="sidebar-content content-area vertical-col">
+
+            </div>
+          </div>
+        </div>
+
+        <!-- Inicio Fomulario -->
+
+        <!--- Fim form--->
+
+        <div class="inner-element uib_w_3 uib_sidebar leftbar bar-bg thumb-bg bar-gutter" data-uib="layout/left_sidebar" data-ver="1" data-anim="{'style':'overlap', 'v':200, 'side':'left', 'dur':200, 'io':false}">
+          <div class="sidebar-content content-area vertical-col">
+
+          </div>
+        </div>
+      </div>
+     
+    </div>
+
+    <script src="//production-assets.codepen.io/assets/common/stopExecutionOnTimeout-b2a7b3fe212eaa732349046d8416e00a9dec26eb7fd347590fbced3ab38af52e.js"></script>
+    <script src="https://code.jquery.com/jquery-2.2.4.min.js"></script>
+    <script>
+      $(document).ready(function(){
+        var $likeToggle = $('.user-input .like');
+        var $shareToggle = $('.user-input .share');
+        var $addRecipeToggle = $('.add-recipe');
+        
+        $likeToggle.on('click', function(e){
+          e.stopPropagation();
+          $(this).toggleClass('liked');
+        });
+        
+        $shareToggle.on('click', function(e){
+          e.stopPropagation();
+          $(this).toggleClass('shared');
+        });
+        
+        $addRecipeToggle.on('click', function(e){
+          e.stopPropagation();
+          $(this).toggleClass('added');
+        });
+        
+      });
+      //# sourceURL=pen.js
+    </script>
+  </body>
+
+</html>﻿

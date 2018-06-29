@@ -1,0 +1,547 @@
+{
+  font-family: 'Titillium Web', sans-serif;
+}
+
+.container {
+  width: 550px;
+  margin: 0 auto;
+  box-shadow: 0px 0px 20px 2px rgba(0, 0, 0, 0.5);
+  margin: 20px auto;
+  min-height: 200px;
+  overflow: hidden;
+}
+
+.feature-heading {
+  text-align: center;
+  margin: 0px 0px 15px;
+  color: rgba(255, 255, 255, 0.5);
+  font-weight: lighter;
+}
+.feature-heading::after {
+  content: '';
+  height: 1px;
+  background-color: rgba(255, 255, 255, 0.5);
+  width: 20%;
+  display: block;
+  margin: 5px auto 0;
+}
+
+.header {
+  background: url(http://www4.theoakkroom.com/wp-content/uploads/2015/03/grilled-chicken-salad.jpg) no-repeat center center;
+  min-height: 450px;
+  background-size: cover;
+  position: relative;
+}
+.header::after {
+  content: '';
+  height: 450px;
+  width: 100%;
+  background: rgba(0, 0, 0, 0.4);
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+.header .navigation {
+  margin: 0;
+  padding: 0;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: auto;
+  position: relative;
+  z-index: 99;
+}
+.header .navigation::before {
+  content: '\f036';
+  font-family: FontAwesome;
+  color: white;
+  font-size: 28px;
+  margin: 15px 0px 0px 15px;
+  cursor: pointer;
+  transform: scale(1, -1);
+  line-height: 65px;
+  background-color: #6791ac;
+  width: 65px;
+  height: 65px;
+  text-align: center;
+  border-radius: 100%;
+}
+.header .navigation .face {
+  display: none;
+  background: url(https://s3.amazonaws.com/uifaces/faces/twitter/whale/128.jpg) no-repeat;
+  background-size: cover;
+  width: 50px;
+  height: 50px;
+  list-style: none;
+  border-radius: 100%;
+  margin-right: 17px;
+}
+.header .header-info {
+  height: calc(400px - 75px);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  position: relative;
+  z-index: 99;
+}
+.header .header-info h2 {
+  margin: 0 0 15px 0;
+  color: #fff;
+  text-align: center;
+  text-shadow: 0px 0px 10px rgba(0, 0, 0, 0.4);
+}
+.header .header-info .header-btns {
+  display: flex;
+}
+.header .header-info .header-btns a {
+  display: block;
+  color: white;
+  text-decoration: none;
+  padding: 7px 25px;
+  border: 2px solid #fff;
+  margin: 0 7px;
+  transition: all 200ms ease-in-out;
+}
+.header .header-info .header-btns a:hover {
+  background: #fff;
+  color: #6791ac;
+}
+
+.recipes {
+  margin: 0 -15px;
+  background: #6791ac;
+  padding-top: 15px;
+  position: relative;
+}
+.recipes::before {
+  content: '';
+  width: 100%;
+  height: 150px;
+  background: linear-gradient(to bottom, rgba(100, 111, 186, 0) 34%, #6791ac 95%);
+  position: absolute;
+  top: -150px;
+}
+.recipes .recipe {
+  width: 100%;
+  margin: 0 auto 15px;
+  border-radius: 5px;
+  display: flex;
+  background: white;
+  padding: 0 15px;
+  background-clip: content-box;
+}
+.recipes .recipe .add-recipe {
+  display: flex;
+  width: 20%;
+  background: #f96b6b;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  transition: all 200ms ease-in-out;
+}
+.recipes .recipe .add-recipe::before {
+  content: '\f067';
+  font-family: FontAwesome;
+  font-size: 20px;
+  color: white;
+  animation: add-recipe-grow 300ms linear;
+}
+.recipes .recipe .add-recipe.added {
+  background: #5bd872;
+}
+.recipes .recipe .add-recipe.added::before {
+  content: '\f00c';
+  animation: add-recipe-grow 300ms linear;
+}
+.recipes .recipe .add-recipe:hover {
+  background: #f84949;
+}
+.recipes .recipe .add-recipe:hover.added {
+  background: #3ed159;
+}
+.recipes .recipe .recipe-info {
+  padding: 10px;
+}
+.recipes .recipe .recipe-info h3, .recipes .recipe .recipe-info p {
+  margin: 0px;
+}
+.recipes .recipe .recipe-info h3 {
+  font-size: 18px;
+  font-weight: 600;
+  color: #666;
+}
+.recipes .recipe .recipe-info p {
+  font-size: 14px;
+  color: #888;
+}
+.recipes .recipe .recipe-info ul {
+  margin: 0;
+  padding: 0;
+  display: flex;
+  justify-content: flex-end;
+}
+.recipes .recipe .recipe-info ul li {
+  list-style: none;
+  margin-left: 15px;
+  color: #888;
+  cursor: pointer;
+}
+.recipes .recipe .recipe-info ul li.like, .recipes .recipe .recipe-info ul li.share {
+  position: relative;
+}
+.recipes .recipe .recipe-info ul li.like::before, .recipes .recipe .recipe-info ul li.share::before {
+  content: '';
+  font-family: FontAwesome;
+  margin-right: 5px;
+}
+.recipes .recipe .recipe-info ul li.like .share-menu, .recipes .recipe .recipe-info ul li.share .share-menu {
+  position: absolute;
+  background: white;
+  width: 65px;
+  display: flex;
+  justify-content: center;
+  border-radius: 2px;
+  top: -30px;
+  left: -9px;
+  -webkit-filter: drop-shadow(0px 0px 1px rgba(0, 0, 0, 0.9));
+  display: none;
+}
+.recipes .recipe .recipe-info ul li.like .share-menu::after, .recipes .recipe .recipe-info ul li.share .share-menu::after {
+  content: '';
+  width: 12px;
+  height: 12px;
+  transform: rotate(45deg);
+  position: absolute;
+  bottom: -6px;
+  border: 6px solid white;
+  border-left: none;
+  border-top: none;
+}
+.recipes .recipe .recipe-info ul li.like .share-menu li, .recipes .recipe .recipe-info ul li.share .share-menu li {
+  margin: 0;
+  padding: 0px 8px;
+}
+.recipes .recipe .recipe-info ul li.like .share-menu .facebook::before, .recipes .recipe .recipe-info ul li.share .share-menu .facebook::before {
+  content: '\f09a';
+  font-family: FontAwesome;
+}
+.recipes .recipe .recipe-info ul li.like .share-menu .twitter::before, .recipes .recipe .recipe-info ul li.share .share-menu .twitter::before {
+  content: '\f099';
+  font-family: FontAwesome;
+}
+.recipes .recipe .recipe-info ul li.like::before {
+  content: '\f004';
+  color: inherit;
+}
+.recipes .recipe .recipe-info ul li.like.liked::before {
+  color: #f96b6b;
+}
+.recipes .recipe .recipe-info ul li.share::before {
+  content: '\f064';
+  color: inherit;
+}
+.recipes .recipe .recipe-info ul li.share.shared::before {
+  color: #3f4c6b;
+}
+
+.favourites {
+  margin: 0 -15px;
+  background: #6791ac;
+  padding-top: 15px;
+  position: relative;
+}
+.favourites .favourite-row {
+  display: flex;
+}
+.favourites .favourite-row .favourite {
+  cursor: pointer;
+  overflow: hidden;
+  min-height: 200px;
+  background-clip: content-box !important;
+  background-size: cover !important;
+  background-color: white;
+  margin-bottom: 15px;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  position: relative;
+}
+.favourites .favourite-row .favourite::before {
+  content: '\f004';
+  font-family: FontAwesome;
+  color: #f96b6b;
+  position: absolute;
+  top: 0;
+  width: calc(100% - 22.5px);
+  padding: 5px;
+  font-size: 20px;
+}
+.favourites .favourite-row .favourite h5 {
+  background: white;
+  margin: 0px;
+  padding: 15px;
+  text-align: center;
+  color: #666;
+  font-weight: 600;
+}
+.favourites .favourite-row .favourite .btn {
+  text-align: center;
+  border-radius: 0;
+  display: flex;
+  padding: 0;
+  border: none;
+  transform: translateY(40px);
+  transition: all 300ms ease-in-out;
+}
+.favourites .favourite-row .favourite .btn a {
+  display: block;
+  width: 50%;
+  color: white;
+  text-decoration: none;
+  padding: 10px;
+  transition: all 300ms ease-in-out;
+}
+.favourites .favourite-row .favourite .btn a.view {
+  background: #5bd872;
+}
+.favourites .favourite-row .favourite .btn a.view:hover {
+  background: #3ed159;
+}
+.favourites .favourite-row .favourite .btn a.remove {
+  background: #f96b6b;
+}
+.favourites .favourite-row .favourite .btn a.remove:hover {
+  background: #f84949;
+}
+.favourites .favourite-row .favourite:nth-child(even) {
+  padding-left: 7.5px;
+}
+.favourites .favourite-row .favourite:nth-child(odd) {
+  padding-right: 7.5px;
+}
+.favourites .favourite-row .favourite:hover .btn {
+  transform: translateY(0px);
+}
+.favourites .favourite-feature-row {
+  margin: 0 15px 15px;
+}
+.favourites .favourite-feature-row .favourite-feature {
+  margin-bottom: 15px;
+  display: flex;
+  justify-content: flex-start;
+  background: white;
+}
+.favourites .favourite-feature-row .favourite-feature .info {
+  width: 100%;
+  padding: 10px;
+}
+.favourites .favourite-feature-row .favourite-feature .info h3, .favourites .favourite-feature-row .favourite-feature .info p {
+  margin: 0px;
+}
+.favourites .favourite-feature-row .favourite-feature .info h3 {
+  font-size: 18px;
+  font-weight: 600;
+  color: #666;
+}
+.favourites .favourite-feature-row .favourite-feature .info p {
+  font-size: 14px;
+  color: #888;
+}
+.favourites .favourite-feature-row .favourite-feature .info .user-input ul {
+  margin: 8px 0 -8px 0;
+  padding: 0;
+  display: flex;
+  justify-content: flex-end;
+  flex-direction: row;
+}
+.favourites .favourite-feature-row .favourite-feature .info .user-input ul li {
+  list-style: none;
+  margin-left: 15px;
+  color: #888;
+  cursor: pointer;
+  font-size: 14px;
+}
+.favourites .favourite-feature-row .favourite-feature .info .user-input ul li.like, .favourites .favourite-feature-row .favourite-feature .info .user-input ul li.share {
+  position: relative;
+}
+.favourites .favourite-feature-row .favourite-feature .info .user-input ul li.like::before, .favourites .favourite-feature-row .favourite-feature .info .user-input ul li.share::before {
+  content: '';
+  font-family: FontAwesome;
+  margin-right: 5px;
+}
+.favourites .favourite-feature-row .favourite-feature .info .user-input ul li.like::before {
+  content: '\f004';
+  color: inherit;
+}
+.favourites .favourite-feature-row .favourite-feature .info .user-input ul li.like.liked::before {
+  color: #f96b6b;
+}
+.favourites .favourite-feature-row .favourite-feature .info .user-input ul li.share::before {
+  content: '\f064';
+  color: inherit;
+}
+.favourites .favourite-feature-row .favourite-feature .info .user-input ul li.share.shared::before {
+  color: #3f4c6b;
+}
+.favourites .favourite-feature-row .favourite-feature ul.user-actions {
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+}
+.favourites .favourite-feature-row .favourite-feature ul.user-actions li {
+  list-style: none;
+  font-size: 16px;
+  width: 45px;
+  height: 45px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  transition: all 200ms ease-in-out;
+}
+.favourites .favourite-feature-row .favourite-feature ul.user-actions li.view {
+  background: #5bd872;
+}
+.favourites .favourite-feature-row .favourite-feature ul.user-actions li.view::after {
+  content: '\f06e';
+  font-family: FontAwesome;
+  color: white;
+}
+.favourites .favourite-feature-row .favourite-feature ul.user-actions li.view:hover {
+  background: #3ed159;
+}
+.favourites .favourite-feature-row .favourite-feature ul.user-actions li.remove {
+  background: #f96b6b;
+}
+.favourites .favourite-feature-row .favourite-feature ul.user-actions li.remove::after {
+  content: '\f00d';
+  font-family: FontAwesome;
+  color: white;
+}
+.favourites .favourite-feature-row .favourite-feature ul.user-actions li.remove:hover {
+  background: #f84949;
+}
+
+.videos {
+  margin: 0 -15px;
+  background: #6791ac;
+  padding-top: 15px;
+  position: relative;
+}
+.videos .video {
+  margin: 0 15px;
+}
+.videos .video a {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: all 250ms ease-in-out;
+  overflow: hidden;
+}
+.videos .video a h4 {
+  position: absolute;
+  top: 0px;
+  width: 100%;
+  text-align: center;
+  z-index: 99;
+  color: #fff;
+  transform: translateY(-30px);
+  transition: all 250ms ease-in-out;
+}
+.videos .video a::after {
+  content: '\f01d';
+  font-family: FontAwesome;
+  color: rgba(91, 216, 114, 0.75);
+  position: absolute;
+  font-size: 10em;
+  transition: all 250ms ease-in-out;
+}
+.videos .video a img {
+  width: 100%;
+  height: auto;
+  opacity: 0.75;
+  transition: all 250ms ease-in-out;
+}
+.videos .video a:hover::after {
+  color: #5bd872;
+}
+.videos .video a:hover h4 {
+  transform: translateY(0);
+}
+.videos .video a:hover img {
+  opacity: 0.95;
+}
+.videos .video-next {
+  display: flex;
+  margin: 0 15px 15px;
+}
+.videos .video-next .video {
+  margin: 0px;
+  opacity: 0.4;
+  height: 100px;
+  width: 25%;
+  position: relative;
+  overflow: hidden;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: all 250ms ease-in-out;
+  cursor: pointer;
+}
+.videos .video-next .video img {
+  width: auto;
+  height: 100%;
+}
+.videos .video-next .video:hover {
+  opacity: 0.95;
+}
+
+.user-menu {
+  margin: 0 -15px;
+  background: #6791ac;
+  position: relative;
+}
+.user-menu ul {
+  margin: 0;
+  padding: 0;
+  display: flex;
+  background: white;
+}
+.user-menu ul li {
+  list-style: none;
+  width: 25%;
+  text-align: center;
+}
+
+.tblList{
+    background: gray;
+    color: #FFF;
+}
+
+
+.user-menu ul li a {
+  font-size: 16px;
+  color: #888;
+  display: block;
+  padding: 15px;
+  text-decoration: none;
+  transition: all 200ms ease-in-out;
+}
+.user-menu ul li a:hover {
+  background: rgba(0, 0, 0, 0.1);
+}
+.user-menu ul li:not(:last-of-type) {
+  border-right: 1px solid rgba(0, 0, 0, 0.1);
+}
+
+@keyframes add-recipe-grow {
+  0% {
+    transform: scale(0);
+  }
+  100% {
+    transform: scale(1);
+  }
+}

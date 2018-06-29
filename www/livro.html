@@ -1,0 +1,153 @@
+﻿<!DOCTYPE html>
+<html>
+
+  <head>
+    <link rel="stylesheet" type="text/css" href="media_button_bar/css/media_button_bar.css">
+
+    <link rel="stylesheet" type="text/css" href="icon-fonts/elusive-icons-2.0.0/css/elusive-icons.css">
+    <link rel="stylesheet" type="text/css" href="bootstrap/css/bootstrap.min.css">
+    <link rel="stylesheet" type="text/css" href="css/stil.css">
+    <link rel="stylesheet" type="text/css" href="bootstrap/css/bootstrap.css">
+    <link rel="stylesheet" type="text/css" href="icon-fonts/font-awesome-4.3.0/css/font-awesome.css">
+    <link rel="stylesheet" type="text/css" href="css/index_main.less.css" class="main-less">
+    <link rel="stylesheet" type="text/css" href="css/font-awesome-ie7.min.css" class="">
+    <link rel="stylesheet" type="text/css" href="css/font-awesome.css" class="">
+    <link rel="stylesheet" type="text/css" href="css/font-awesome.min.css" class="">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+
+    <script src="/__/firebase/4.9.0/firebase-app.js"></script>
+    <script src="/__/firebase/4.9.0/firebase-auth.js"></script>
+    <script src="/__/firebase/4.9.0/firebase-database.js"></script>
+    <script src="/__/firebase/4.9.0/firebase-messaging.js"></script>
+    <script src="/__/firebase/init.js"></script>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no">
+
+    <script src="intelxdk.js"></script>
+    <script src="cordova.js"></script>
+    <script src="xhr.js"></script>
+    <script src="xdk/init-dev.js"></script>
+    <script type="application/javascript" src="lib/jquery.min.js"></script>
+    <script type="application/javascript" src="marginal/marginal-position.min.js"></script>
+    <script type="application/javascript" src="sidebar/js/hammer.js"></script>
+    <script type="application/javascript" src="sidebar/js/jquery.hammer.js"></script>
+    <script type="application/javascript" src="sidebar/js/swipe-hammer.js"></script>
+    <script type="application/javascript" src="sidebar/js/sidebar.js"></script>
+    <script src="js/index.js"></script>
+  </head>
+
+  <body>
+    <div class="upage" id="mainpage">
+      <div class="upage-outer">
+        <div class="uib-header header-bg container-group inner-element uib_w_4" data-uib="layout/header" data-ver="0">
+          <h2>Livro</h2>
+
+        </div>
+
+        <div class="upage-content ac0 content-area vertical-col left" id="page_94_20">
+
+         
+
+            
+            
+          <div class="container">
+
+           
+<div class="panel panel-default">
+    <table class="table table-hover">
+      <tbody>
+        <tr>
+          <td>
+            <span class="glyphicon glyphicon-file"></span>
+           Lorem ipsum elementum adipiscing ad vehicula consectetur magna egestas vel nostra litora, etiam nostra ad himenaeos nisl semper turpis velit vulputate sapien. faucibus interdum cras sociosqu blandit at habitasse porta sem bibendum risus, senectus sollicitudin justo aliquet pretium rhoncus vivamus dictum venenatis, ullamcorper vehicula nisi at a faucibus quisque euismod nullam. amet auctor feugiat tellus sit interdum condimentum litora dictumst ornare, blandit dictumst donec pellentesque consectetur eget diam. maecenas purus arcu duis mauris litora pellentesque himenaeos quisque, velit aliquam non vitae varius fermentum per, iaculis mi placerat torquent ipsum tincidunt vulputate. 
+
+	
+	
+          </td>
+          <td class="text-right text-nowrap">
+          
+          
+          </td>
+        </tr>
+      </tbody>
+    </table>
+    
+    
+    <div class="text-center">
+                   <a href="index.html"><button class="btn btn-xs btn-info">Voltar ao inicio</button> </a> 
+          </div>
+    
+  </div>
+              
+              
+              
+              
+             
+              
+          
+              
+
+          </div>
+
+          <!-- Inicio Fomulario -->
+
+          <!--- Fim form--->
+
+          <div class="uib-footer uib-footer-fixed footer-bg container-group inner-element uib_w_2 header-bg" data-uib="layout/footer" data-ver="0">
+            <h2></h2>
+            <div class="widget-container wrapping-col single-centered"></div>
+            <div class="widget-container content-area horiz-area wrapping-col left"></div>
+            <div class="widget-container content-area horiz-area wrapping-col right">
+
+            </div>
+          </div>
+          <div class="inner-element uib_w_3 uib_sidebar leftbar bar-bg thumb-bg bar-gutter" data-uib="layout/left_sidebar" data-ver="1" data-anim="{'style':'overlap', 'v':200, 'side':'left', 'dur':200, 'io':false}">
+            <div class="sidebar-content content-area vertical-col">
+
+            </div>
+          </div>
+        </div>
+
+        <!-- Inicio Fomulario -->
+
+        <!--- Fim form--->
+
+        <div class="inner-element uib_w_3 uib_sidebar leftbar bar-bg thumb-bg bar-gutter" data-uib="layout/left_sidebar" data-ver="1" data-anim="{'style':'overlap', 'v':200, 'side':'left', 'dur':200, 'io':false}">
+          <div class="sidebar-content content-area vertical-col">
+
+          </div>
+        </div>
+      </div>
+     
+    </div>
+
+    <script src="//production-assets.codepen.io/assets/common/stopExecutionOnTimeout-b2a7b3fe212eaa732349046d8416e00a9dec26eb7fd347590fbced3ab38af52e.js"></script>
+    <script src="https://code.jquery.com/jquery-2.2.4.min.js"></script>
+    <script>
+      $(document).ready(function(){
+        var $likeToggle = $('.user-input .like');
+        var $shareToggle = $('.user-input .share');
+        var $addRecipeToggle = $('.add-recipe');
+        
+        $likeToggle.on('click', function(e){
+          e.stopPropagation();
+          $(this).toggleClass('liked');
+        });
+        
+        $shareToggle.on('click', function(e){
+          e.stopPropagation();
+          $(this).toggleClass('shared');
+        });
+        
+        $addRecipeToggle.on('click', function(e){
+          e.stopPropagation();
+          $(this).toggleClass('added');
+        });
+        
+      });
+      //# sourceURL=pen.js
+    </script>
+  </body>
+
+</html>

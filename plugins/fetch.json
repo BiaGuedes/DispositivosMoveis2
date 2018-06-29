@@ -1,0 +1,68 @@
+{
+    "cordova-plugin-device": {
+        "source": {
+            "type": "local",
+            "path": "C:\\Users\\Almir\\AppData\\Local\\Intel\\XDK\\xdk\\components\\server\\cordova\\cordova-plugins\\cordova-plugin-device"
+        },
+        "is_top_level": true,
+        "variables": {}
+    },
+    "cordova-plugin-splashscreen": {
+        "source": {
+            "type": "local",
+            "path": "C:\\Users\\Almir\\AppData\\Local\\Intel\\XDK\\xdk\\components\\server\\cordova\\cordova-plugins\\cordova-plugin-splashscreen"
+        },
+        "is_top_level": true,
+        "variables": {}
+    },
+    "cordova-plugin-statusbar": {
+        "source": {
+            "type": "local",
+            "path": "C:\\Users\\Almir\\AppData\\Local\\Intel\\XDK\\xdk\\components\\server\\cordova\\cordova-plugins\\cordova-plugin-statusbar"
+        },
+        "is_top_level": true,
+        "variables": {}
+    },
+    "cordova-plugin-inappbrowser": {
+        "source": {
+            "type": "local",
+            "path": "C:\\Users\\Almir\\AppData\\Local\\Intel\\XDK\\xdk\\components\\server\\cordova\\cordova-plugins\\cordova-plugin-inappbrowser"
+        },
+        "is_top_level": true,
+        "variables": {}
+    },
+    "cordova-plugin-network-information": {
+        "source": {
+            "type": "registry",
+            "id": "cordova-plugin-network-information@1.2.1"
+        },
+        "is_top_level": true,
+        "variables": {}
+    },
+    "cordova-plugin-ad-admob": {
+        "source": {
+            "type": "registry",
+            "id": "cordova-plugin-ad-admob"
+        },
+        "is_top_level": true,
+        "variables": {}
+    },
+    "cordova-plugin-ad-admob-sdk": {
+        "source": {
+            "type": "git",
+            "url": "https://github.com/cranberrygame/cordova-plugin-ad-admob-sdk",
+            "subdir": "."
+        },
+        "is_top_level": false,
+        "variables": {}
+    },
+    "cordova-plugin-extras-google-play-services": {
+        "source": {
+            "type": "git",
+            "url": "https://github.com/cranberrygame/cordova-plugin-extras-google-play-services",
+            "subdir": "."
+        },
+        "is_top_level": false,
+        "variables": {}
+    }
+}
